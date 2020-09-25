@@ -28,14 +28,10 @@ export default {
       deezerData:'',
     }
   },
-  mounted(){
+  created(){
     axios.get('https://api.deezer.com/playlist/436962',{
      "method":"GET",
      "crossDomain":true,
-      "headers":{
-        'Access-Control-Allow-Origin' :"302f6ef7e8c5e170c1ac25dba98e867d",
-        'vary': origin
-      }
     })
     .then((res)=>{
       this.deezerData = res;
