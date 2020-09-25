@@ -26,6 +26,7 @@ export default {
 
 .nav-column {
   background-color: $dark-Red-Secondary;
+  position: fixed;
   position: absolute;
   bottom: 0%;
   left: 0%;
@@ -46,7 +47,6 @@ export default {
       color: $play-color;
       padding-left: 26px;
       margin-left:-9px;
-      width:191px;
       border-left: 3px solid $play-color;
     }
   }
