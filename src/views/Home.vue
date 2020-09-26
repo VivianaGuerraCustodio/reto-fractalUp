@@ -2,7 +2,7 @@
   <div>
     <navigationColumn />
     <search />
-<musicContainer/>
+    <musicContainer/>
     <musicPlayer />
   </div>
 </template>
