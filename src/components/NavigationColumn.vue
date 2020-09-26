@@ -27,7 +27,7 @@ export default {
 .nav-column {
   background-color: $dark-Red-Secondary;
   position: fixed;
-  position: absolute;
+  
   bottom: 0%;
   left: 0%;
   right: 0%;
