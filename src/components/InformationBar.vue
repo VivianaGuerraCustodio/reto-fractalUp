@@ -1,5 +1,8 @@
 <template>
   <div class="song-selected">
+    <button class="font-play">
+      <font-awesome-icon icon="play" id="play" />
+    </button>
     <div class="img-info">
       <img class="artist-album-img" src="" />
     </div>
@@ -25,6 +28,22 @@ export default {
 .song-selected {
   margin: 43px 20px 13px 272px;
   display: flex;
+  box-sizing: border-box;
+  .font-play {
+    color: #eb5757;
+    position: absolute;
+    margin: 90px 0px 0px 100px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    box-sizing: border-box;
+  }
+  #play {
+    width: 63px;
+    height: 72px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
 }
 .artist-album-img {
   width: 250px;
@@ -42,7 +61,7 @@ input[type="button"]:nth-child(1) {
   color: #ffffff;
   width: 117px;
   height: 31px;
-  border-style: none;
+  border: none;
   border-radius: 100px;
 }
 input[type="button"]:nth-child(2) {
