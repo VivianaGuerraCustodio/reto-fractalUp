@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <navigationColumn />
-    <search />
+    <search 
+    :wordToSearch="wordToSearch" />
     <informationBar/>
     <div class="container-info-music">
       <musicContainer />
@@ -31,9 +32,15 @@ export default {
   },
   data() {
     return {
-      deezerData: ""
+      deezerData: "",
+      word :"",
     };
-  }
+  },
+  methods: {
+    wordToSearch(inputValue){
+      this.word = inputValue;
+    },
+  },
 };
 </script>
 <style lang="scss">
