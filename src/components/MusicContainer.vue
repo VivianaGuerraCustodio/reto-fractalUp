@@ -1,6 +1,7 @@
 <template>
   <div class="player-music">
     <div class="data-music" v-for="(info, index) in deezerData" :key="index">
+      <button><font-awesome-icon icon="play" class="font-icon-play" /></button>
       <img class="img-artist" :src="info.album.cover" />
       <font-awesome-icon icon="ellipsis-v" class="font-icon-menu" />
       <p class="title-music">{{ info.title }}</p>
@@ -46,6 +47,20 @@ export default {
     margin: 11px;
     width: 188px;
     box-sizing: border-box;
+    button {
+      outline: none;
+      border-style: none;
+      cursor: pointer;
+      justify-content:center;
+      display: flex;
+    }
+    .font-icon-play {
+      color: #ffffff;
+      position: absolute;
+      margin: 68px;
+      width: 32px;
+      height: 36px;
+    }
     .title-music {
       //styleName: 14-bold-qs;
       color: #555555;
@@ -60,9 +75,9 @@ export default {
     }
     .font-icon-menu {
       color: #ffffff;
-      position:absolute;
-      margin-left:149px;
-      margin-top:5px;
+      position: absolute;
+      margin-left: 149px;
+      margin-top: 5px;
     }
     .artist-name {
       //styleName: 12-regular-qs;
