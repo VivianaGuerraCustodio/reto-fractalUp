@@ -43,6 +43,7 @@ export default {
   margin-left:84px;
   position: absolute;
   .container-info-music {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
   }
