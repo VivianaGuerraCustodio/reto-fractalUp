@@ -41,7 +41,6 @@ export default {
     }
     .bold {
       margin-top:25px;
-      font-family: 'Inter', sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 22px;
@@ -49,7 +48,6 @@ export default {
       color: #ffffff;
     }
     .light {
-      font-family: 'Inter', sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;

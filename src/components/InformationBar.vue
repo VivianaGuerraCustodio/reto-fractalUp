@@ -21,6 +21,7 @@ export default {
 };
 </script>
 <style lang="scss">
+@import "../scss/main.scss";
 .song-selected {
   margin: 43px 20px 13px 272px;
   display: flex;

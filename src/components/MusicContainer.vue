@@ -30,6 +30,7 @@ export default {
 };
 </script>
 <style lang="scss">
+@import "../scss/main.scss";
 .player-music {
   box-sizing: border-box;
   padding-bottom: 82px;
@@ -48,7 +49,6 @@ export default {
     .title-music {
       //styleName: 14-bold-qs;
       color: #555555;
-      font-family: Quicksand;
       font-size: 14px;
       font-style: normal;
       font-weight: 700;
@@ -61,7 +61,6 @@ export default {
     .artist-name {
       //styleName: 12-regular-qs;
       color: #828282;
-      font-family: Quicksand;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
