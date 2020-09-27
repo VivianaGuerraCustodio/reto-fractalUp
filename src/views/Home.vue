@@ -45,7 +45,6 @@ export default {
   .container-info-music {
     display: flex;
     flex-direction: row;
-    background-color: aquamarine;
   }
 }
 </style>

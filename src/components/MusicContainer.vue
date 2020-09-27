@@ -44,7 +44,6 @@ export default {
     padding: 0 14px;
     margin: 11px;
     width: 188px;
-    background-color: green;
     box-sizing: border-box;
     .title-music {
       //styleName: 14-bold-qs;
