@@ -2,6 +2,7 @@
   <div class="home">
     <navigationColumn />
     <search />
+    <informationBar/>
     <div class="container-info-music">
       <musicContainer />
     </div>
@@ -17,6 +18,7 @@ import navigationColumn from "@/components/NavigationColumn.vue";
 import Search from "@/components/SearchText.vue";
 import musicContainer from "@/components/MusicContainer.vue";
 import musicPlayer from "@/components/MusicPlayer.vue";
+import informationBar from "@/components/InformationBar.vue";
 
 export default {
   name: "Home",
@@ -24,7 +26,8 @@ export default {
     navigationColumn,
     musicPlayer,
     Search,
-    musicContainer
+    musicContainer,
+    informationBar
   },
   data() {
     return {
@@ -35,11 +38,12 @@ export default {
 </script>
 <style lang="scss">
 .home {
-  display: flex;
-  flex-direction:column;
   box-sizing: border-box;
+  margin-left:84px;
+  position: absolute;
   .container-info-music {
-    margin:auto auto auto 229px;
+    display: flex;
+    flex-direction: row;
     background-color: aquamarine;
   }
 }
