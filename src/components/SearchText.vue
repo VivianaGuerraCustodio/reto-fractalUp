@@ -17,8 +17,8 @@ export default {
 </script>
 <style lang="scss">
 .box-search {
-  position: relative;
-  flex: 0 1 364px;
+  
+ 
   .input-search {
     border: 1px solid #828282;
     padding: 6px 42px;
