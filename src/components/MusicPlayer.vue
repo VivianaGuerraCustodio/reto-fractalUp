@@ -13,11 +13,6 @@
       <input type="range" name="" id="" />
       <font-awesome-icon icon="volume-off" class="icon-volumen" />
     </div>
-
-    <!--<div class="progress-bar">
-      <font-awesome-icon>
-      <button></button>
-    </div>-->
   </div>
 </template>
 <script>
@@ -27,10 +22,10 @@ export default {
 </script>
 <style lang="scss">
 @import "../scss/main.scss";
-.icon-volumen{
-  color:#ffffff;
-  margin:auto;
-  width:18px;
+.icon-volumen {
+  color: #ffffff;
+  margin: auto;
+  width: 18px;
   height: 42px;
   padding-left: 29px;
 }

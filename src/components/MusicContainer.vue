@@ -20,13 +20,11 @@ export default {
   name: "musicContainer",
   mounted() {
     axios
-      //http://api.deezer.com/playlist/436962 utilice un dominio diferente para no tener problemas con el CORS de api deezer. https://developers.deezer.com/api
       .get(
         "https://cors-anywhere.herokuapp.com/https://api.deezer.com/playlist/436962/"
       )
       .then(res => {
         this.deezerData = res.data.tracks.data;
-        console.log(this.deezerData);
       });
   },
   data() {

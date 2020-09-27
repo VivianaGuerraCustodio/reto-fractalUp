@@ -2,8 +2,8 @@
   <div>
     <div class="box-search">
       <input
+        @input.capture="() => searchInApi(this.deezerData,this.inputValue)"
         v-model="inputValue"
-        v-on:keyup="wordToSearch(inputValue)"
         class="input-search"
         type="text"
         name="Buscar"
@@ -12,7 +12,7 @@
       />
       <font-awesome-icon icon="search" class="font-icon" />
     </div>
-    <div class="song-selected">
+    <div class="song-selected" v-if="(searchInApi = !searchInApi)">
       <button class="font-play">
         <font-awesome-icon icon="play" id="play" />
       </button>
@@ -21,7 +21,7 @@
       </div>
       <div class="container-infoOfArtist">
         <div class="infoOfArtist">
-          <p>nombre del artista</p>
+          <p>Nombre del artista</p>
           <p>palabra con enfasis</p>
           <p>
             Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
@@ -47,36 +47,39 @@ export default {
       )
       .then(res => {
         this.deezerData = res.data.tracks.data;
-        console.log(this.deezerData);
       });
   },
   data() {
     return {
       deezerData: "",
-      inputValue: ""
+      inputValue: "",
+      wordFound: ""
     };
   },
-  props: ["wordToSearch"]
-};
-/*
-export const search = (this.deezerData, this.inputValue) => {
-  const stringLower = this.inputValue.toLowerCase();
-  const newArray = [];
-  for( const index in )
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].name.toLowerCase().startsWith(stringLower)) {
-      newArray.push(data[i]);
+  methods: {
+    searchInApi(deezerData, inputValue) {
+      const stringLower = inputValue.toLowerCase();
+      const newArray = [];
+      for (const wordSearch in deezerData) {
+        if (
+          deezerData[wordSearch].artist.name
+            .toLowerCase()
+            .startsWith(stringLower)
+        ) {
+          newArray.push(deezerData[wordSearch]);
+          this.wordFound = newArray;
+        }
+      }
+      return newArray;
     }
   }
-  return newArray;
 };
-*/
 </script>
 <style lang="scss">
 @import "../scss/main.scss";
 .container-infoOfArtist {
   height: 250px;
-  background-color:#c74e4e9a;
+  background-color: #c74e4e9a;
 }
 .infoOfArtist {
   box-sizing: border-box;
