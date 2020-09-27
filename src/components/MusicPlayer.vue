@@ -9,6 +9,11 @@
     <button>
       <font-awesome-icon icon="step-forward" class="font-icon-back-next" />
     </button>
+    <div class="volumen-range">
+      <input type="range" name="" id="" />
+      <font-awesome-icon icon="volume-off" class="icon-volumen" />
+    </div>
+
     <!--<div class="progress-bar">
       <font-awesome-icon>
       <button></button>
@@ -22,6 +27,18 @@ export default {
 </script>
 <style lang="scss">
 @import "../scss/main.scss";
+.icon-volumen{
+  color:#ffffff;
+  margin:auto;
+  width:18px;
+  height: 42px;
+  padding-left: 29px;
+}
+.volumen-range {
+  display: inline-flex;
+  position: relative;
+  left: 23%;
+}
 .cero {
   bottom: 0%;
   left: 0%;
@@ -43,7 +60,7 @@ export default {
   }
   .font-icon-back-next {
     color: #ffffff;
-    width:25px;
+    width: 25px;
   }
 
   .font-icon-play {
@@ -51,6 +68,5 @@ export default {
     width: 50px;
     height: 60px;
   }
-
 }
 </style>

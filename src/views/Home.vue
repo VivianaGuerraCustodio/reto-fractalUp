@@ -3,7 +3,6 @@
     <navigationColumn />
     <search 
     :wordToSearch="wordToSearch" />
-    <informationBar/>
     <div class="container-info-music">
       <musicContainer />
     </div>
@@ -19,7 +18,6 @@ import navigationColumn from "@/components/NavigationColumn.vue";
 import Search from "@/components/SearchText.vue";
 import musicContainer from "@/components/MusicContainer.vue";
 import musicPlayer from "@/components/MusicPlayer.vue";
-import informationBar from "@/components/InformationBar.vue";
 
 export default {
   name: "Home",
@@ -28,7 +26,6 @@ export default {
     musicPlayer,
     Search,
     musicContainer,
-    informationBar
   },
   data() {
     return {

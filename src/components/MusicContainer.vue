@@ -1,11 +1,16 @@
 <template>
-  <div class="player-music">
-    <div class="data-music" v-for="(info, index) in deezerData" :key="index">
-      <button><font-awesome-icon icon="play" class="font-icon-play" /></button>
-      <img class="img-artist" :src="info.album.cover" />
-      <font-awesome-icon icon="ellipsis-v" class="font-icon-menu" />
-      <p class="title-music">{{ info.title }}</p>
-      <p class="artist-name">{{ info.artist.name }}</p>
+  <div>
+    <p>Resultados</p>
+    <div class="player-music">
+      <div class="data-music" v-for="(info, index) in deezerData" :key="index">
+        <button>
+          <font-awesome-icon icon="play" class="font-icon-play" />
+        </button>
+        <img class="img-artist" :src="info.album.cover" />
+        <font-awesome-icon icon="ellipsis-v" class="font-icon-menu" />
+        <p class="title-music">{{ info.title }}</p>
+        <p class="artist-name">{{ info.artist.name }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -51,7 +56,7 @@ export default {
       outline: none;
       border-style: none;
       cursor: pointer;
-      justify-content:center;
+      justify-content: center;
       display: flex;
     }
     .font-icon-play {

@@ -1,8 +1,57 @@
-$dark-Red-Secondary:#662323;
-$background:#e5e5e5;
-$red-principal: #E86060;
-$play-color: #EB5757;
-$light-red: #FF7676;
-*{
-    font-size:Quicksand;
+$dark-Red-Secondary: #662323;
+$background: #e5e5e5;
+$red-principal: #e86060;
+$play-color: #eb5757;
+$light-red: #ff7676;
+* {
+    font-size: Quicksand;
+}
+.song-selected {
+    margin: 43px 20px 13px 272px;
+    display: flex;
+    box-sizing: border-box;
+    .font-play {
+        color: #eb5757;
+        position: absolute;
+        margin: 90px 0px 0px 100px;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        box-sizing: border-box;
+    }
+    #play {
+        width: 63px;
+        height: 72px;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+}
+.artist-album-img {
+    width: 250px;
+    height: 250px;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    width: 100vh;
+}
+input[type="button"]:nth-child(1) {
+    cursor: pointer;
+    margin: 8px 20px;
+    background-color: #e86060;
+    color: #ffffff;
+    width: 117px;
+    height: 31px;
+    border: none;
+    border-radius: 100px;
+}
+input[type="button"]:nth-child(2) {
+    cursor: pointer;
+    margin: 8px 20px;
+    background-color: #ffffff;
+    color: #e86060;
+    width: 117px;
+    height: 31px;
+    border: 1px solid #eb5757;
+    border-radius: 100px;
 }
