@@ -3,16 +3,16 @@
     <div><img class="icon" src="../assets/foxbel-music@2x.png" /></div>
     <div class="nav-statements">
       <p class="bold">Mi librería</p>
-      <p>Recientes</p>
-      <p>Artistas</p>
-      <p>Álbums</p>
-      <p>Canciones</p>
-      <p>Estaciones</p>
+      <p class="light">Recientes</p>
+      <p class="light">Artistas</p>
+      <p class="light">Álbums</p>
+      <p class="light">Canciones</p>
+      <p class="light">Estaciones</p>
       <p class="bold">Playlist</p>
-      <p>Metal</p>
-      <p>Para bailar</p>
-      <p>Rock 90's</p>
-      <p>Baladas</p>
+      <p class="light">Metal</p>
+      <p class="light">Para bailar</p>
+      <p class="light">Rock 90's</p>
+      <p class="light">Baladas</p>
     </div>
   </div>
 </template>
@@ -27,39 +27,49 @@ export default {
 .nav-column {
   background-color: $dark-Red-Secondary;
   position: fixed;
-  
+  display: flex;
+  flex-direction: column;
   bottom: 0%;
   left: 0%;
   right: 0%;
-  top:0%;
-  width: 232px;
+  top: 0%;
+  width: 330px;
   .nav-statements {
-    margin-left: 10px;
-    font-family: Quicksand;
-    font-style: normal;
-    font-size: 12px;
-    color: #ffffff;
+    margin-left: 27px;
     p{
-      height: 10px;
-      margin-left:20px;
+      margin: 2px 2px 0 2px;
     }
-    p:hover{
+    .bold {
+      margin-top:25px;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 27px;
+      color: #ffffff;
+    }
+    .light {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: #ffffff;
+    }
+    p:hover {
       color: $play-color;
       padding-left: 26px;
-      margin-left:-9px;
+      margin-left: -26px;
       border-left: 3px solid $play-color;
     }
   }
-  .bold {
-    font-weight: bold;
-    font-size: 14px;
-    padding-top: 15px;
-  }
+
   .icon {
-    height: 43px;
-    width: 170px;
+    height: 59px;
+    width: 250px;
     left: 27px;
     top: 25px;
+    padding:23px 0;
     position: relative;
   }
 }
