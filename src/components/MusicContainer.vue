@@ -2,6 +2,7 @@
   <div class="player-music">
     <div class="data-music" v-for="(info, index) in deezerData" :key="index">
       <img class="img-artist" :src="info.album.cover" />
+      <font-awesome-icon icon="ellipsis-v" class="font-icon-menu" />
       <p class="title-music">{{ info.title }}</p>
       <p class="artist-name">{{ info.artist.name }}</p>
     </div>
@@ -54,8 +55,14 @@ export default {
       line-height: 18px;
       letter-spacing: 0em;
       text-align: left;
-      margin-top:7px;
-      margin-bottom:1px;
+      margin-top: 7px;
+      margin-bottom: 1px;
+    }
+    .font-icon-menu {
+      color: #ffffff;
+      position:absolute;
+      margin-left:149px;
+      margin-top:5px;
     }
     .artist-name {
       //styleName: 12-regular-qs;
@@ -66,7 +73,7 @@ export default {
       line-height: 15px;
       letter-spacing: 0em;
       text-align: left;
-      margin-top:1px;
+      margin-top: 1px;
     }
     .img-artist {
       width: 160px;
