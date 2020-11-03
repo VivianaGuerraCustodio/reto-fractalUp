@@ -31,7 +31,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # Reto
 
-<h3 align="center"> Crear una plataforma de música que consuma la Api de deezer , debe estar desarrollada respetando a los wireframes proporcionados en Figma</h3>
+<h3 align="center"> Crear una plataforma de música que consuma la Api de deezer , debe estar desarrollada respetando los wireframes proporcionados en Figma</h3>
 <li>Empresa : Fractal Up</li>
 <li>Tiempo : 48 horas</li>
 <li> Tecnologías : Vue , (para lo estilos , libre elección)</li>
