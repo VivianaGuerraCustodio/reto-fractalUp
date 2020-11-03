@@ -1,9 +1,25 @@
 <template>
   <div class="player cero">
+    <div class="imgAlbum">
+      <img :src="trackId.album.cover" alt="imagen del álbum" />
+    </div>
+    <div>
+      <slot> <audio id="linkTrack" :src="trackId.link"/></slot>
+    </div>
+    <!--
+<audio id="demo" src="audio.mp3"></audio>
+<div>
+  <button onclick="document.getElementById('demo').play()">Reproducir el Audio</button>
+  <button onclick="document.getElementById('demo').pause()">Pausar el Audio</button>
+  <button onclick="document.getElementById('demo').volume+=0.1">Aumentar el Volumen</button>
+  <button onclick="document.getElementById('demo').volume-=0.1">Disminuir el Volumen</button>
+</div>
+
+    -->
     <button>
       <font-awesome-icon icon="step-backward" class="font-icon-back-next" />
     </button>
-    <button>
+    <button @click.prevent="play" >
       <font-awesome-icon icon="play-circle" class="font-icon-play" />
     </button>
     <button>
@@ -17,7 +33,25 @@
 </template>
 <script>
 export default {
-  name: "musicPlayer"
+  name: "musicPlayer",
+  data() {
+    return {
+      trackId: ""
+    };
+  },
+  created() {
+    this.$bus.$on("trackLink", info => {
+      this.trackId = info;
+    });
+  },
+  methods: {
+    play() {
+      document.getElementById("demo").play();
+    },
+    stop() {
+      document.getElementById("demo").pause();
+    }
+  }
 };
 </script>
 <style lang="scss">
@@ -29,6 +63,13 @@ export default {
   height: 42px;
   padding-left: 29px;
 }
+
+.imgAlbum {
+  position: absolute;
+  height: 90px;
+  left: inherit;
+}
+
 .volumen-range {
   display: inline-flex;
   position: relative;

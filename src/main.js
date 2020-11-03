@@ -12,6 +12,8 @@ import {
   faVolumeOff
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import EventBus from '@/plugins/event-bus'
+Vue.use(EventBus)
 
 library.add(
   faSearch,

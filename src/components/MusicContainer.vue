@@ -3,13 +3,14 @@
     <p>Resultados</p>
     <div class="player-music">
       <div class="data-music" v-for="(info, index) in deezerData" :key="index">
-        <button>
+        <button @click.prevent="sendToPlayer(info)">
           <font-awesome-icon icon="play" class="font-icon-play" />
         </button>
         <img class="img-artist" :src="info.album.cover" />
         <font-awesome-icon icon="ellipsis-v" class="font-icon-menu" />
         <p class="title-music">{{ info.title }}</p>
         <p class="artist-name">{{ info.artist.name }}</p>
+        <!--<p>{{info.link}}</p>-->
       </div>
     </div>
   </div>
@@ -31,7 +32,12 @@ export default {
     return {
       deezerData: ""
     };
-  }
+  },
+  methods: {
+    sendToPlayer(info){
+     this.$bus.$emit('trackLink', info)
+    }
+  },
 };
 </script>
 <style lang="scss">
@@ -60,7 +66,7 @@ export default {
     .font-icon-play {
       color: #ffffff;
       position: absolute;
-      margin: 68px;
+      margin-top: 60px;
       width: 32px;
       height: 36px;
     }
