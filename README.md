@@ -40,7 +40,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## Solución 
 
 <div style="border:2px black solid">
-<img src="src/assets/launch.gif" />
+<img align="center" src="src/assets/launch.gif" />
 </div>
 <br>
 <em> Problemas presentados:
